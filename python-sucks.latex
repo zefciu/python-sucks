@@ -1,0 +1,99 @@
+\documentclass{beamer}
+
+\mode<presentation>
+{
+  \usetheme{Singapore}
+  % \setbeamercovered{transparent}
+}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+% \usepackage{times}
+
+% For pygmentize
+\usepackage{fancyvrb}
+\usepackage{color}
+
+\input{styles}
+
+
+\title{Dlaczego python śmierdzi?}
+
+\author[]{Szymon Pyżalski}
+
+\institute{Grupa Allegro}
+
+\date {PyConPL 2014}
+
+
+\begin{document}
+
+\begin{frame}
+  \titlepage 
+  \url{http://github.com/zefciu/python-sucks/}
+\end{frame}
+
+\begin{frame}{O czym będzie...}
+  \tableofcontents
+  %\pausesections
+\end{frame}
+
+
+\section{Dlaczego ta prezentacja?}
+
+\begin{frame}{Czego nie atakujemy?}
+
+  \begin{itemize}
+  \item
+      Paradygmatu
+  \pause
+  \item
+      Zen
+  \pause
+  \item
+      Tego co czyni Pythona szczególnym
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Co może śmierdzieć?}
+    \pause
+    To co śmierdzi w Pythonie to wyłącznie defekty, które są sprzeczne
+    z paradygmatem i charakterem języka.
+\end{frame}
+
+
+\section{Dlaczego wyjątki śmierdzą?}
+
+\begin{frame}{Wyjątki}
+    \begin{itemize}
+    \item
+        Spełniają bardzo kluczowe role
+    \pause
+    \item
+        Reguła EAFP jako uznany punkt \emph{designu} języka
+    \pause
+    \item
+        Bardzo proste
+    \pause
+    \item
+        Ich obsługa mało się różni od innych języków
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Przykład}
+\tiny{
+\input{exceptions}
+}
+\end{frame}
+
+\begin{frame}{Alternatywy?}
+    \begin{itemize}
+    \item
+        Bardziej rozbudowany standard wyjątków
+    \pause
+    \item
+        \emph{Pattern matching}
+
+\end{document}
