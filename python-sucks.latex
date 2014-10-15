@@ -46,6 +46,7 @@
 \begin{frame}{Czego nie atakujemy?}
 
   \begin{itemize}
+  \pause
   \item
       Paradygmatu
   \pause
@@ -60,7 +61,7 @@
 \begin{frame}{Co może śmierdzieć?}
     \pause
     To co śmierdzi w Pythonie to wyłącznie defekty, które są sprzeczne
-    z paradygmatem i charakterem języka.
+    lub niezależne od paradygmatem i ,,charakteru'' języka.
 \end{frame}
 
 
@@ -68,6 +69,7 @@
 
 \begin{frame}{Wyjątki}
     \begin{itemize}
+    \pause
     \item
         Spełniają bardzo kluczowe role
     \pause
@@ -90,10 +92,98 @@
 
 \begin{frame}{Alternatywy?}
     \begin{itemize}
+    \pause
     \item
         Bardziej rozbudowany standard wyjątków
     \pause
     \item
         \emph{Pattern matching}
+    \end{itemize}
+\end{frame}
+
+\section{Model obiektowy - no super}
+
+\begin{frame}{Wywołanie klasy bazowej}
+    \begin{itemize}
+    \pause
+    \item
+        Mamy dwie metody wywołania klasy bazowej (a co na to zen?)
+    \pause
+    \item 
+        \Verb|super| nie wywołuje nadklasy
+    \pause
+    \item
+        Musimy użyć w całej hierarchii tej samej metody
+    \pause
+    \item
+        Jeśli nie - wyniki są nieprzewidywalne
+    \end{itemize}
+\end{frame}
+
+\section{ABC - WTF?}
+
+\begin{frame}{Czym miało być abc}
+    \begin{itemize}
+    \pause
+    \item
+        Dynamiczny system typów
+    \pause
+    \item 
+        Zgodne z koncepcją duck-typing
+    \pause
+    \item
+        Użycie \Verb|isinstance| jest znowu OK
+    \pause
+    \item
+        Jeśli coś zostało nazwane kaczką, to jest to kaczka
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Dziedziczenie}
+\small{
+\input{abc-inherit}
+}
+\end{frame}
+
+\begin{frame}{Rejestracja}
+\tiny{
+\input{abc-register}
+}
+\end{frame}
+
+\section{No to jaki jest ten paradygmat?}
+
+\begin{frame}{Stosunek pythona do wyrażeń}
+    \begin{itemize}
+    \pause
+    \item
+        Operator przypisania nie może wystąpić w wyrażeniu
+    \pause
+    \item 
+        Mamy lambdę ograniczoną do wyrażenia
+    \pause
+    \item
+        Mamy komprehensje ograniczone do wyrażenia
+    \pause
+    \item
+        Ale python podobno nie jest językiem funkcyjnym!
+    \end{itemize}
+\end{frame}
+
+\section{Głupie pomysły}
+
+\begin{frame}{Krótka lista}
+    \begin{itemize}
+    \pause
+    \item
+        Krotki tworzące się przy zostawieniu przecinka
+    \pause
+    \item 
+        \Verb|2 < 'dwa'| - to jest silne typowanie?
+    \pause
+    \item 
+        To w końcu typy piszemy z wielkiej litery? Tak jak \Verb|dict|?
+    \end{itemize}
+\end{frame}
 
 \end{document}
