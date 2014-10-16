@@ -1,4 +1,4 @@
-forms.pdf: python-sucks.latex styles.tex exceptions.tex abc-inherit.tex abc-register.tex Makefile
+python-sucks.pdf: python-sucks.latex styles.tex exceptions.tex abc-inherit.tex abc-register.tex Makefile
 	latex -output-format=pdf python-sucks.latex
 
 styles.tex: Makefile

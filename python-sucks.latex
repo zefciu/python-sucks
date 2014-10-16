@@ -9,6 +9,7 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage{polski}
+\usepackage{graphicx}
 
 % \usepackage{times}
 
@@ -42,6 +43,18 @@
 
 
 \section{Dlaczego ta prezentacja?}
+
+\begin{frame}{O czym nie będzie?}
+    \includegraphics[width=0.8\paperwidth]{derp1}
+\end{frame}
+
+\begin{frame}{O czym nie będzie?}
+    \includegraphics[width=0.8\paperwidth]{derp2}
+\end{frame}
+
+\begin{frame}{O czym nie będzie?}
+    \includegraphics[width=0.8\paperwidth]{derp3}
+\end{frame}
 
 \begin{frame}{Czego nie atakujemy?}
 
