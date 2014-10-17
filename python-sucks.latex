@@ -20,7 +20,8 @@
 \input{styles}
 
 
-\title{Dlaczego python śmierdzi?}
+\title{Wszystko co złe w pythonie}
+\subtitle{Dlaczego python śmierdzi?}
 
 \author[]{Szymon Pyżalski}
 
@@ -43,6 +44,10 @@
 
 
 \section{Dlaczego ta prezentacja?}
+
+\begin{frame}{O czym nie będzie?}
+    \includegraphics[height=0.8\paperheight]{derp0}
+\end{frame}
 
 \begin{frame}{O czym nie będzie?}
     \includegraphics[width=0.8\paperwidth]{derp1}
@@ -74,7 +79,7 @@
 \begin{frame}{Co może śmierdzieć?}
     \pause
     To co śmierdzi w Pythonie to wyłącznie defekty, które są sprzeczne
-    lub niezależne od paradygmatem i ,,charakteru'' języka.
+    lub niezależne od paradygmatu i ,,charakteru'' języka.
 \end{frame}
 
 
@@ -123,7 +128,10 @@
         Mamy dwie metody wywołania klasy bazowej (a co na to zen?)
     \pause
     \item 
-        \Verb|super| nie wywołuje nadklasy
+        \Verb|super| nie robi tego, co sugeruje nazwa
+    \pause
+    \item 
+        Nie wiemy, co wywoła super
     \pause
     \item
         Musimy użyć w całej hierarchii tej samej metody
@@ -131,6 +139,18 @@
     \item
         Jeśli nie - wyniki są nieprzewidywalne
     \end{itemize}
+\end{frame}
+
+\begin{frame}{Wywołanie klasy bazowej}
+    \tiny{
+        \input{inheritance-super}
+    }
+\end{frame}
+
+\begin{frame}{Wywołanie klasy bazowej}
+    \tiny{
+        \input{inheritance-explicit}
+    }
 \end{frame}
 
 \section{ABC - WTF?}
@@ -164,6 +184,27 @@
 }
 \end{frame}
 
+\section{There should be one... bullshit}
+\begin{frame}{Instalowalne skrypty}
+    \begin{itemize}
+        \pause
+        \item \Verb|python -m|
+        \pause
+        \item \Verb|console\_scripts|
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Formatowanie stringów}
+    \begin{itemize}
+        \pause
+        \item \Verb|\%|
+        \pause
+        \item \Verb|format()|
+        \pause
+        \item \Verb|from string import Template|
+    \end{itemize}
+\end{frame}
+
 \section{No to jaki jest ten paradygmat?}
 
 \begin{frame}{Stosunek pythona do wyrażeń}
@@ -183,9 +224,9 @@
     \end{itemize}
 \end{frame}
 
-\section{Głupie pomysły}
+\section{Drobne głupoty}
 
-\begin{frame}{Krótka lista}
+\begin{frame}{Krótka lista drobnych głupot}
     \begin{itemize}
     \pause
     \item
@@ -195,8 +236,11 @@
         \Verb|2 < 'dwa'| - to jest silne typowanie?
     \pause
     \item 
-        To w końcu typy piszemy z wielkiej litery? Tak jak \Verb|dict|?
+        To w końcu typy piszemy z wielkiej litery? \pause Tak jak \Verb|dict|?
     \end{itemize}
+\end{frame}
+
+\begin{frame}{Pytania?}
 \end{frame}
 
 \end{document}
